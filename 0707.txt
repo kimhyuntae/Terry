@@ -1,0 +1,30 @@
+입력 안하면 안됫다고 에러
+학번이 값에 맞지 않으면 에러메세지 
+
+메인에
+delete는 수강에서만 만듦
+수강메니저에 
+4. 수강신청 insert , 처음에 null
+5. 수강신청 취소 delete
+6. 수강신청 리스트 select
+7. 성적 입력 (update 사용)
+
+수강메니저 클래스, 수강 클래스
+자바 doc
+
+grade, date 값이 null
+
+eclipse에서
+preference -> server ->Runtime~ 
+
+web browser -> use external~, chrome -> 
+
+Web -> CSS,HTML, JSP -UTF-8
+
+
+
+
+
+
+
+
