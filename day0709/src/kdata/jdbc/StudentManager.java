@@ -39,14 +39,14 @@ public class StudentManager {
 				
 		try{
 			con=DBUtill.getConnection();
-			sql = "select * from student";
+			sql = "select * from student ";
 			pstmt=con.prepareStatement(sql);
 			rs = pstmt.executeQuery();
 			
 			while(rs.next()){
-				System.out.println("wh");
 			Student s = new Student(rs.getString("snum"), rs.getString("sname"),
 						rs.getString("sgender"));
+			list.add(s);
 			}
 			
 		}finally{

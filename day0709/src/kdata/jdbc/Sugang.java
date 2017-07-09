@@ -9,6 +9,11 @@ public class Sugang {
 	private int grade;
 	private Date date;
 	
+	public Sugang(){
+		super();
+		
+	}
+	
 	public Sugang(String snum, String subcode, int grade, Date date){
 		super();
 		this.snum=snum;

@@ -9,7 +9,7 @@ import java.util.List;
 
 public class SugangManager {
 
-	List list= new ArrayList();
+	List<Sugang> list= new ArrayList();
 	
 	public static void insert(Sugang sg) throws SQLException{
 		Connection con = null;
@@ -40,13 +40,14 @@ public class SugangManager {
 		
 		try{
 			con=DBUtill.getConnection();
-			sql = " select * from sugang";
+			sql = " select * from sugang ";
 			pstmt=con.prepareStatement(sql);
 			rs = pstmt.executeQuery();
 			
 			while(rs.next()){
 				Sugang sg = new Sugang(rs.getString("snum"), rs.getString("subcode"),
 						rs.getInt("grade"), rs.getDate("date"));
+				list.add(sg);
 			}
 			
 		}finally{
@@ -81,10 +82,10 @@ public class SugangManager {
 			con=DBUtill.getConnection();
 			sql="update sugang set grade=? where snum=? and subcode=?";
 			pstmt = con.prepareStatement(sql);
-			/*pstmt= setInt(1, grade);
-			pstmt= setString(2, snum);
-			pstmt= setString(3, subcode);
-			pstmt=executeUpdate();*/
+			pstmt.setInt(1, grade);
+			pstmt.setString(2, snum);
+			pstmt.setString(3, subcode);
+			pstmt.executeUpdate();
 		}
 		finally{
 			DBUtill.close(con, pstmt);

@@ -55,8 +55,8 @@ public class ManagerTest {
 	    	
 	    case 3:
 	         System.out.println("학생이름을 입력하세요");
-	         sname = sc.next();
-	         System.out.println(sm.selectByName(sname));
+	         String name = sc.next();
+	         System.out.println(sm.selectByName(name));
 	         break;
 	    	
 	    case 4:
@@ -71,6 +71,7 @@ public class ManagerTest {
 	             SugangManager.insert(sg);
 	             break;
 	          }
+	    	 break;
 	    	 
 	    case 5:
 	    	System.out.println("학번을 입력하세요");
