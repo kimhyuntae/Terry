@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+/* 선택자{ 속셔명:값; 속성명;} */
+//
+h1 {
+	color: red;
+	background-color: gold
+}
+
+b {
+	background-color: blue
+}
+
+.f {
+	color: red;
+}
+
+#s {
+	color: blue;
+}
+[type=text]{width: 100%; height:400px}
+[type=text]:focus {
+	background-color: orange;
+	border-style: groove;
+	border-color: red;
+	border-width: 10px
+}
+
+[type=password]:hover {
+	background-color: gold;
+	color: blue
+}
+
+a:link {
+	text-decoration: none
+}
+
+a:visited {
+	text-decoration: none
+}
+
+a:hover {
+	text-decoration: line-through;
+	color: maroon;
+}
+
+p:first-letter {
+	border-style: dotted;
+	border-width: 10px;
+	border-color: aqua;
+	border-radius: 5px
+}
+
+.f:first-letter {
+	border-style: dotted;
+	border-width: 8px;
+	border-color: gray;
+	border-radius: 5px
+}
+</style>
+</head>
+
+
+<body>
+	<!-- id는 한번만 사용, class는 여러번 사용 -->
+	<h1 class="f">안녕 ㅎㅎ</h1>
+	<h1 id="s">반갑~~~~</h1>
+
+	<p>동해물과 백두산이</p>
+	<b>굵게 </b>
+	<br>
+
+	<input type="text">
+	<br>
+	<a href="https://www.naver.com/">naver</a>
+
+	<br>
+	<input type="password">
+
+
+
+
+
+
+</body>
+</html>
