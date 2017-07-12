@@ -1,0 +1,13 @@
+부트스트랩 도움 site
+https://bootswatch.com
+
+css 압축 site
+https://csscompressor.com/
+
+코드 간편히 test하는 site
+https://jsfiddle.net/
+
+선생님 이메일
+best2409 네이버
+
+jquery.com에서 jquery-3.2.1 다운로드
