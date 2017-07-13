@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="./js/jquery-3.2.1.js"></script>
+<script>
+	//	{}는 객체를 의미
+
+	$(function() {
+		var a = [ 1, 2, 3, 4 ];
+		var b = [ "홍", "장", "보", "고" ];
+		var c = [ {num : 1,name : "김현태"}, {num : 2,name : "이현태"} ]; //객체 배열
+		/* 	console.log(a.length);
+
+			for (var i = 0; i < a.length; i++)
+				console.log(a[i]);
+
+			//확장 for문과 비슷
+			$.each(a, function(index, item) {
+				//console.log(index);	//배열번호
+				console.log(item); //배열값
+
+			});
+
+			$.each(b, function(index, item) {
+				console.log(index);
+				//console.log(item);
+			}); */
+
+		console.log(c.length);
+
+		$.each(c, function(index, item) {
+			//console.log(index);
+			console.log(item.name);		
+			
+			 $("span").append((item.name)+"<br>"); 	
+		
+		});
+
+		
+		$("li").each(function(index,item){
+			//console.log(item);
+			console.log($(item));		//jquery 객체
+			
+			$(item).css("color","red");
+			//item.css("color","blue");
+		})
+
+		
+		
+	});
+</script>
+</head>
+<body>
+
+	<span> </span>
+
+<ul>
+	<li>1
+	<li>2
+	<li>3
+	<li>4
+</ul>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

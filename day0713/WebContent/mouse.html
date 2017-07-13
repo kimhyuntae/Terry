@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="./js/jquery-3.2.1.js"></script>
+<script>
+	$(function() {
+		/* $("img").on("mouseover", function(){
+			$(this).attr("src", "12.jpg");
+			
+		}).on("mouseout", function(){
+			$(this).attr("src", "11.jpg");
+		});	 */
+
+		/* $("img").on("mouseover", function(){
+			$(this).attr("src", "12.jpg");		
+		});
+		
+		$("img").on("mouseout", function(){
+			$(this).attr("src", "11.jpg");	
+		}); */
+
+		//ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+		// 이미지 처리 이벤트
+		//ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+		$("img").on({
+			mouseover : function() {
+				$(this).attr("src", "12.jpg");
+			},
+			mouseout : function() {
+				$(this).attr("src", "11.jpg");
+			}
+		});
+
+		$("#all").click(function() {
+			//console.log($("#all").prop("checked"));
+			console.log($("#all").attr("checked"));
+			$("[type=checkbox]").prop("checked", $("#all").prop("checked"));
+		});
+
+	});
+</script>
+
+</head>
+<body>
+
+	<img src="11.jpg">
+	<br>
+
+	<input type="checkbox" id="all"> 모두선택
+	<br>
+	<input type="checkbox">1번
+	<input type="checkbox">2번
+	<input type="checkbox">3번
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="./js/jquery-3.2.1.js"></script>
+
+<script>
+	$(document).ready(function() {
+		//alert("Hi");
+
+		//$("*").css("color", "red");
+		//$("h1").css("color", "red");
+		//$("p").css("color", "red");
+		$("#hi2").css("color", "red");
+		$(".hi1").css("color", "green");
+		$("[type=text]")
+		.css("border-style", "solid")
+		.css("border-color", "green")
+		.css("border-width", "20px")
+
+		//$("ol>li").parent().parent().find("p").css("color","blue")
+		//$("ol>li:even").css("color","blue");
+		$("ol>li").filter(":even").css("color","red");
+		
+		
+	});
+</script>
+
+</head>
+<body>
+
+	<h1 class="hi1">안녕하세요</h1>
+	<h1 id="hi2">안녕하세요</h1>
+	<p>안녕하세요</p>	
+
+	<input type="text">
+	<input type="password">
+	
+	<ul>
+		<li>피자
+		<li>치킨
+	</ul>
+	
+	<ol>
+		<li>피자
+		<li>파스타
+		<li>치킨
+		<li>피자
+		<li>파스타
+		<li>치킨
+	</ol>
+	
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

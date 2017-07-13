@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="./js/jquery-3.2.1.js"></script>
+<style>
+#txt {
+	color: red
+}
+;
+</style>
+
+<script>
+	$(function() {
+		//alert("시작");	
+		/* $("#btn").on("click", function(){
+			alert("버튼 클릭");
+		}); */
+
+		$("#btn").click(function() {
+			//$("#txt").val("버튼내용");	//버튼내용을 설정함 -> set개념
+			//alert($("#txt").val());
+
+			//$("span").text($("#txt").val());
+
+			//$("span").html("<h1>" + $("#txt").val() + "</h1>");
+			//console.log($(this).prev().prev().next());
+
+			//$(this).prev().prev().next().css("color","red");			
+			//$("#txt2").val("#txt1");
+
+			var a = $("#txt1").val(); //위에껄 밑에 txt에 복사
+			$("#txt2").val(a);
+
+			
+			var b = $("#txt3").val()
+			var c = $("#txt4").val()
+			
+			$(this).next().html(b-c);
+
+		});
+
+	});
+</script>
+
+</head>
+<body>
+	<input type="text" id="txt1">
+	<br>
+	<input type="text" id="txt2">
+	<br>
+	<br>
+
+	<input type="text" id="txt3">
+	<br>
+	<input type="text" id="txt4">
+
+	<span> </span>
+	<input type="button" id="btn" value="이벤트 연습">
+
+</body>
+</html>
+
+
+
+
+
+
+

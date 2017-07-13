@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script src="./js/jquery-3.2.1.js"></script>
+<script>
+	$(function() {
+
+		$("#btn").click(function() {
+			//alert("Hi");
+
+			//$("div").html("<h1>html()</h1>");
+			//$("div").html("<h1>html()</h1>");
+
+			//$("<h1>prependTo()</h1>").prependTo("div");
+			//$("<h1>appendTo()</h1>").prependTo("div");
+
+			//$("div").before("<h1>html()</h1>");
+			//$("div").after("<h1>html()</h1>");
+
+			var a = $("#txt1").val();
+
+			$("div").find("ol").append("<li>" + a + "</li>");
+
+		});
+
+	});
+</script>
+
+</head>
+<body>
+	<div>
+		<ul></ul>
+		<ol></ol>
+	</div>
+	<input type="text" id="txt1">
+	<input type="button" value="Dom 텍스트" id="btn">
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
