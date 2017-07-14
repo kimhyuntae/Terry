@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="./js/jquery-3.2.1.js"></script>
+<style>
+ul {
+	color: blue;
+};
+#fs{
+border-color: green;
+border-width: 30px;
+}
+</style>
+
+<script>
+	$(function() {
+
+		$("#form1").on("submit", function(e) {
+
+			if ($("#id").val() == "") {
+				alert("id를 입력해주세요");
+				$("#id").focus();
+				e.preventDefault();
+			}
+			/* else{
+				($"#form1").submit(function(e));
+			} */
+
+		})
+		$("#form1").on("submit", function(e2) {
+
+			if ($("#pw").val() == "") {
+				alert("pw를 입력해주세요");
+				$("#pw").focus();
+				e2.preventDefault();
+			}
+
+		})
+	});
+</script>
+
+
+</head>
+<body>
+
+
+	<form action="login.kht" method="get" id="form1">
+		<!-- 가짜 url로 접근 -->
+		<fieldset id="fs">
+			<ul> 
+				<li>servlet
+				<li>아이디 : <input type="text" name="id" id="id">
+				<li>비밀번호 : <input type="password" name="pw" id="pw">
+				<li><input type="submit">
+			</ul>
+		</fieldset>
+	</form>
+
+
+	<form action="login.jsp" method="get" id="form2">
+		<!-- jsp로 접근 -->
+		<fieldset>
+			<ul>
+				<li>js
+				<li>아이디 : <input type="text" name="id" id="id">
+				<li>비밀번호 : <input type="password" name="pw" id="pw">
+				<li><input type="submit">
+			</ul>
+		</fieldset>
+	</form>
+
+
+
+
+</body>
+</html>
