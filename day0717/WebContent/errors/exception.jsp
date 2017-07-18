@@ -8,11 +8,5 @@
 </head>
 <body>
 
-	<ul>
-		<li><a href="<%= request.getContextPath() %>/user/register.jsp">회원가입</a>
-		<li><a href="login.jsp">로그인</a>
-		<li><a href="<%= request.getContextPath() %>/list.kdata">회원 리스트</a>	
-	</ul>
-
 </body>
 </html>

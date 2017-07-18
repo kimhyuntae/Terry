@@ -7,12 +7,17 @@
 <title>Insert title here</title>
 </head>
 <body>
+<!-- 동적으로 변환해서 여러번 사용할 수 있게 함 -->
 
-	<ul>
-		<li><a href="<%= request.getContextPath() %>/user/register.jsp">회원가입</a>
-		<li><a href="login.jsp">로그인</a>
-		<li><a href="<%= request.getContextPath() %>/list.kdata">회원 리스트</a>	
-	</ul>
+<h1>Error</h1>
+<hr>
+<% 
+	out.print(request.getAttribute("errorMsg"));
+%>
+
+${requestScope.errorMsg}		<!-- EL에서 -->
+${errorMsg}						<!-- 이렇게 짧게 써도 알아서 찾아감 -->
+
 
 </body>
 </html>

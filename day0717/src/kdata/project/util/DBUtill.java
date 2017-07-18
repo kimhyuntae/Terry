@@ -38,7 +38,7 @@ public class DBUtill {
    // static 객체를 생성하지 않아도 접근할수 있다. 객체가 없으면 static 사용하여 한번에 호출
    // 아무나 클래스당 1개 반환형 메소드 이름 메게변수 x 예외처리
    public static Connection getConnection() throws SQLException{
-      //DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521", "test", "1234");
+      //DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521", "TEST", "1234");
       
       return DriverManager.getConnection(CON_URL,USER_ID,USER_PASSWORD);//getConnection은 DriverManager꺼다 
    } 

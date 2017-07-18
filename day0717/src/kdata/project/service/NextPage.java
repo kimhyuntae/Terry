@@ -25,6 +25,11 @@ public class NextPage {
 	public void setRedirect(boolean isRedirect) {
 		this.isRedirect = isRedirect;
 	}
+
+	@Override
+	public String toString() {
+		return "NextPage [pageName=" + pageName + ", isRedirect=" + isRedirect + "]";
+	}
 	
 	
 	

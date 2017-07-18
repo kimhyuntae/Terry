@@ -1,6 +1,7 @@
 package kdata.project.controller;
 
 import java.io.IOException;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -8,6 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import kdata.project.service.NextPage;
+import kdata.project.service.UserDetailService;
 import kdata.project.service.UserListService;
 import kdata.project.service.UserRegisterService;
 import kdata.project.service.UserService;
@@ -43,7 +45,7 @@ public class UserServlet extends HttpServlet {
 		System.out.println(path);	//day0717만 나옴, 이것을 자르는 작업을 하려함
 		System.out.println(path.length());*/
 		
-		//페이지 이동 어떻게 할지 생각~
+		//페이지 이동 어떻게 할지 생각
 		
 		System.out.println(cmd);
 		
@@ -54,17 +56,21 @@ public class UserServlet extends HttpServlet {
 		if(cmd.equals("register.kdata")){
 			System.out.println("회원가입");
 			service = new UserRegisterService();
-			service.execute(request,  response);
+			nextPage = service.execute(request,  response);	//interface 사용
 		}
 		//회원 리스트
 		else if(cmd.equals("list.kdata")){
 			System.out.println("회원 리스트");
 			service = new UserListService();
-			service.execute(request,  response);
+			nextPage = service.execute(request,  response);
+			//System.out.println(nextPage);
+
 		}
 		//회원 상세페이지
 		else if(cmd.equals("detail.kdata")){
 			System.out.println("회원 상세페이지");
+			service = new UserDetailService();
+			nextPage = service.execute(request, response);
 		}
 		//회원 정보 삭제
 		else if(cmd.equals("delete.kdata")){
@@ -89,11 +95,11 @@ public class UserServlet extends HttpServlet {
 		else {			
 			if(nextPage.isRedirect()){			
 				response.sendRedirect(nextPage.getPageName());
+		}else{
+			request.getRequestDispatcher(nextPage.getPageName()).forward(request,response);
 		}
-		else{
-				request.getRequestDispatcher(nextPage.getPageName()).forward(request,response);
-			}
-		
+			
+		}
 		}
 	
 		
@@ -104,8 +110,9 @@ public class UserServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		//doGet(request, response);
+		
+		request.setCharacterEncoding("UTF-8");
+		doGet(request, response);
 	}
 
 }
