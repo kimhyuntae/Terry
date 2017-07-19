@@ -1,0 +1,68 @@
+table {
+	height: 33%;
+	align: "center";
+	width: 50%;
+	border: gray;
+	border-collapse: separate;
+	border-spacing: 2px;
+	align: "center";
+}
+
+th {
+	padding: 15px;
+	border: none;
+	border-left: 5px solid #fff;
+	border-bottom: 1px solid #DDD;
+	background: white;
+	font-weight: normal;
+	text-align: center;
+	/* text-shadow: 0 1px #FFF; */
+	vertical-align: middle;
+}
+
+td {
+	padding: 15px;
+	border: none;
+	border-bottom: 1px solid #DDD;
+	text-align: left;
+	vertical-align: baseline;
+}
+
+input {
+	padding: 15px;
+	border: none;
+	border-bottom: 1px solid #DDD;
+	text-align: center;
+	vertical-align: baseline;
+}
+
+fieldset {
+	border: black;
+	background-color: rgba(255, 255, 255, 0.5);
+	padding: 3px;
+	vertical-align: top;
+	display: block;
+	border-bottom: 3px solid #FFFFFF;
+}
+
+#table {
+	position: absolute;
+	top: 30%;
+	left: 40%;
+	width: 60%;
+	height: 60%;
+	/* background-color: #FC0; */
+	margin-top: -50px;
+	/* margin-left: -100px; */
+}
+
+#sub {
+	width: 50%;
+	left: -50px;
+	padding left: -540px;
+	left: -50px;
+}
+
+#msg {
+	color: red;
+}
